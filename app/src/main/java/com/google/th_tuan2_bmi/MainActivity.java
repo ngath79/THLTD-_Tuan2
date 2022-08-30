@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editcannang.findViewById(R.id.editcannang);
-        editchieucao.findViewById(R.id.editchieucao);
-        ketqua.findViewById(R.id.ketqua);
+        editcannang = findViewById(R.id.editcannang);
+        editchieucao = findViewById(R.id.editchieucao);
+        ketqua = findViewById(R.id.ketqua);
 
         ketqua.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,10 +28,11 @@ public class MainActivity extends AppCompatActivity {
                 double n = Double.parseDouble(editcannang.getText().toString());
                 double c = Double.parseDouble(editchieucao.getText().toString());
                 Intent intent = new Intent(MainActivity.this,ketqua.class);
-                intent.putExtra("cao", c);
-                intent.putExtra("nang",n);
+                intent.putExtra("nang", n);
+                intent.putExtra("cao",c);
                 startActivity(intent);
             }
         });
     }
+
 }

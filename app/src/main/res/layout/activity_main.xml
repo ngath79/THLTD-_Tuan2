@@ -1,108 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#3FD1C3"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="179dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="16dp"
-        android:text="BẢNG CHỈ SỐ"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#58955B"
+        android:orientation="vertical"
+        android:padding="25dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="164dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="104dp"
-        android:text="BMI"
-        android:textAlignment="center"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Tính chỉ số BMI"
+            android:textAlignment="center"
+            android:textSize="34sp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="179dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="72dp"
-        android:text="CÔNG THỨC TÍNH"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="373dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="32dp"
-        android:text="Nhập chiều cso, cân nặng của bạn:"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="20dp"
+                android:text="Cân nặng:"
+                android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="141dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="48dp"
-        android:text="Chiều cao:"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            <EditText
+                android:id="@+id/editcannang"
+                android:layout_width="262dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="56dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-    <EditText
-        android:id="@+id/editchieucao"
-        android:layout_width="206dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="424dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="144dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="36dp"
-        android:text="Cân nặng:"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="50dp"
+                android:text="Chiều cao:"
+                android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/editcannang"
-        android:layout_width="203dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="503dp" />
+            <EditText
+                android:id="@+id/editchieucao"
+                android:layout_width="262dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="56dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/ketqua"
-        android:layout_width="159dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="96dp"
-        android:text="Kết quả"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editcannang" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/ketqua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="#30A398"
+            android:text="Kết quả"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
